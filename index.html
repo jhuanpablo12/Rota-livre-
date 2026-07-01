@@ -1,0 +1,925 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- ===================== SEO BÁSICO ===================== -->
+<title>Código Riqueza — O Manual Definitivo de Finanças Pessoais | eBook</title>
+<meta name="description" content="Descubra o método passo a passo que já ajudou mais de 15 mil pessoas a sair das dívidas, organizar as finanças e construir patrimônio real. Garantia de 7 dias.">
+<meta name="keywords" content="finanças pessoais, ebook finanças, sair das dívidas, investir do zero, educação financeira, liberdade financeira">
+<meta name="author" content="Código Riqueza">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://exemplo.com/">
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="Código Riqueza — O Manual Definitivo de Finanças Pessoais">
+<meta property="og:description" content="O método passo a passo para sair das dívidas e construir um patrimônio sólido, mesmo começando do zero.">
+<meta property="og:image" content="https://via.placeholder.com/1200x630/0A0A0A/D4AF37?text=C%C3%B3digo+Riqueza">
+<meta property="og:locale" content="pt_BR">
+
+<!-- Favicon (placeholder em SVG inline — substitua pelo seu) -->
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%230A0A0A'/%3E%3Ctext x='50' y='68' font-size='60' text-anchor='middle' fill='%23D4AF37'%3E%24%3C/text%3E%3C/svg%3E">
+
+<!-- ===================== FONTES (Google Fonts via CDN) ===================== -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700;800;900&family=Manrope:wght@400;500;600;700;800&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+
+<style>
+/* =========================================================================
+   TOKENS — Sistema de Design
+   Cor:  --bg (#0A0A0A) / --bg-alt (#121212) / --gold (#D4AF37) /
+         --gold-light (#F4E1A1) / --paper (#F5F3EE) / --muted (#8C8C86)
+   Tipo: Playfair Display (display/serif) · Manrope (corpo) · Space Mono (números/ticker)
+   ========================================================================= */
+:root{
+  --bg:#0A0A0A;
+  --bg-alt:#121110;
+  --bg-card:#161513;
+  --gold:#D4AF37;
+  --gold-light:#F0DFA0;
+  --gold-dim:#8a712b;
+  --paper:#F5F3EE;
+  --muted:#9a968c;
+  --line:rgba(212,175,55,0.16);
+  --green:#3f8f5f;
+  --radius:14px;
+  --maxw:1180px;
+  --shadow-gold: 0 0 40px rgba(212,175,55,0.15);
+  --ff-display:'Playfair Display', Georgia, serif;
+  --ff-body:'Manrope', -apple-system, sans-serif;
+  --ff-mono:'Space Mono', monospace;
+}
+
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{
+  background:var(--bg);
+  color:var(--paper);
+  font-family:var(--ff-body);
+  line-height:1.6;
+  -webkit-font-smoothing:antialiased;
+  overflow-x:hidden;
+}
+img{max-width:100%;display:block;}
+a{color:inherit;text-decoration:none;}
+ul{list-style:none;}
+button{font-family:inherit;cursor:pointer;border:none;}
+
+/* Reduced motion respeitado */
+@media (prefers-reduced-motion: reduce){
+  *{animation-duration:0.01ms !important; animation-iteration-count:1 !important; transition-duration:0.01ms !important; scroll-behavior:auto !important;}
+}
+
+/* Foco visível para acessibilidade */
+a:focus-visible, button:focus-visible, summary:focus-visible{
+  outline:2px solid var(--gold);
+  outline-offset:3px;
+}
+
+/* Skip link */
+.skip-link{
+  position:absolute; left:-999px; top:0; background:var(--gold); color:#0A0A0A;
+  padding:10px 18px; z-index:999; font-weight:700; border-radius:0 0 8px 0;
+}
+.skip-link:focus{left:0;}
+
+/* Textura de fundo "papel de razão contábil" — assinatura visual sutil */
+body::before{
+  content:"";
+  position:fixed; inset:0; z-index:0; pointer-events:none;
+  background-image:
+    linear-gradient(rgba(212,175,55,0.035) 1px, transparent 1px);
+  background-size: 100% 42px;
+  opacity:.5;
+}
+
+.container{max-width:var(--maxw); margin:0 auto; padding:0 24px; position:relative; z-index:1;}
+.eyebrow{
+  display:inline-flex; align-items:center; gap:8px;
+  font-family:var(--ff-mono); font-size:12px; letter-spacing:.14em; text-transform:uppercase;
+  color:var(--gold); border:1px solid var(--line); padding:7px 14px; border-radius:100px;
+  background:rgba(212,175,55,0.06);
+}
+h1,h2,h3{font-family:var(--ff-display); font-weight:800; line-height:1.15;}
+.section{padding:96px 0; position:relative; z-index:1;}
+.section-head{text-align:center; max-width:680px; margin:0 auto 56px;}
+.section-head h2{font-size:clamp(28px,4vw,42px); margin-top:16px;}
+.section-head p{color:var(--muted); margin-top:14px; font-size:17px;}
+.gold-text{color:var(--gold);}
+
+/* Botões */
+.btn{
+  display:inline-flex; align-items:center; justify-content:center; gap:10px;
+  padding:18px 34px; border-radius:10px; font-weight:800; font-size:16.5px;
+  letter-spacing:.01em; position:relative; overflow:hidden; transition:transform .25s ease, box-shadow .25s ease;
+}
+.btn-primary{
+  background:linear-gradient(135deg, var(--gold-light), var(--gold) 55%, var(--gold-dim));
+  color:#161104;
+  box-shadow:0 10px 30px -8px rgba(212,175,55,0.55);
+}
+.btn-primary:hover{ transform:translateY(-3px); box-shadow:0 16px 40px -6px rgba(212,175,55,0.7);}
+/* Efeito de brilho (shine) ao passar o mouse */
+.btn-primary::after{
+  content:""; position:absolute; top:0; left:-75%; width:50%; height:100%;
+  background:linear-gradient(120deg, transparent, rgba(255,255,255,0.55), transparent);
+  transform:skewX(-20deg);
+}
+.btn-primary:hover::after{ animation:shine 0.9s ease forwards; }
+@keyframes shine{ to{ left:130%; } }
+
+.btn-outline{
+  background:transparent; border:1.5px solid var(--gold); color:var(--gold);
+}
+.btn-outline:hover{ background:rgba(212,175,55,0.1); transform:translateY(-2px); }
+.btn-block{width:100%;}
+.btn-lg{padding:22px 40px; font-size:19px;}
+
+/* =========================== BARRA FIXA SUPERIOR =========================== */
+.topbar{
+  background:var(--gold); color:#161104; text-align:center; font-family:var(--ff-mono);
+  font-size:13px; font-weight:700; letter-spacing:.03em; padding:9px 12px;
+  position:sticky; top:0; z-index:60;
+}
+.topbar span{opacity:.85; font-weight:400;}
+
+/* =========================== HEADER / NAV =========================== */
+header.site{
+  position:sticky; top:34px; z-index:59; backdrop-filter:blur(10px);
+  background:rgba(10,10,10,0.75); border-bottom:1px solid var(--line);
+  transition:padding .25s ease;
+}
+.nav{display:flex; align-items:center; justify-content:space-between; padding:16px 0;}
+.logo{font-family:var(--ff-display); font-weight:800; font-size:21px; letter-spacing:.02em;}
+.logo em{color:var(--gold); font-style:normal;}
+.nav .btn{padding:11px 22px; font-size:14px;}
+
+/* =========================== HERO =========================== */
+.hero{
+  padding:76px 0 90px; position:relative; overflow:hidden;
+}
+.hero::before{ /* glow dourado ambiente — parallax leve via JS */
+  content:""; position:absolute; width:640px; height:640px; border-radius:50%;
+  background:radial-gradient(circle, rgba(212,175,55,0.20), transparent 70%);
+  top:-220px; right:-160px; z-index:0; pointer-events:none;
+}
+.hero-grid{
+  display:grid; grid-template-columns:1.05fr .95fr; gap:56px; align-items:center;
+}
+.hero h1{font-size:clamp(34px,5vw,58px); letter-spacing:-.01em;}
+.hero h1 .hl{color:var(--gold); font-style:italic;}
+.hero .sub{color:var(--muted); font-size:18px; margin:22px 0 30px; max-width:520px;}
+.hero .eyebrow{margin-bottom:22px;}
+.hero-cta-row{display:flex; flex-wrap:wrap; gap:16px; align-items:center;}
+.hero-note{font-family:var(--ff-mono); font-size:12.5px; color:var(--muted); margin-top:12px;}
+
+/* Selos de confiança */
+.trust-row{
+  display:flex; flex-wrap:wrap; gap:26px; margin-top:40px; padding-top:28px; border-top:1px solid var(--line);
+}
+.trust-item{display:flex; align-items:center; gap:9px; font-size:13.5px; color:var(--muted);}
+.trust-item svg{flex-shrink:0; color:var(--gold);}
+.trust-item strong{color:var(--paper);}
+
+/* Mockup do eBook — 100% CSS, sem imagens externas */
+.book-wrap{
+  display:flex; justify-content:center; align-items:center; position:relative; perspective:1400px;
+}
+.book{
+  width:280px; height:390px; position:relative; transform-style:preserve-3d;
+  transform:rotateY(-24deg) rotateX(4deg); animation:float 5s ease-in-out infinite;
+}
+@keyframes float{ 0%,100%{transform:rotateY(-24deg) rotateX(4deg) translateY(0);} 50%{transform:rotateY(-24deg) rotateX(4deg) translateY(-14px);} }
+.book-cover{
+  position:absolute; inset:0; border-radius:4px 8px 8px 4px;
+  background:
+    linear-gradient(155deg, #17140d, #0b0a07 60%),
+    repeating-linear-gradient(115deg, rgba(212,175,55,0.05) 0 2px, transparent 2px 6px);
+  border:1px solid rgba(212,175,55,0.5);
+  box-shadow: 10px 20px 50px -10px rgba(0,0,0,0.7), inset 0 0 0 1px rgba(212,175,55,0.08);
+  display:flex; flex-direction:column; justify-content:space-between;
+  padding:30px 24px; color:var(--gold-light);
+}
+.book-cover .tag{font-family:var(--ff-mono); font-size:10px; letter-spacing:.2em; color:var(--gold); text-transform:uppercase;}
+.book-cover h3{font-size:30px; line-height:1.1; color:var(--gold-light); font-family:var(--ff-display);}
+.book-cover .sub2{font-size:11.5px; color:#cbb676; margin-top:10px; line-height:1.5;}
+.book-cover .seal{
+  align-self:flex-start; border:1px solid var(--gold); border-radius:50%; width:56px; height:56px;
+  display:flex; align-items:center; justify-content:center; font-family:var(--ff-mono); font-size:9px;
+  color:var(--gold); text-align:center; line-height:1.2;
+}
+.book-pages{
+  position:absolute; right:-9px; top:6px; bottom:6px; width:10px; border-radius:2px;
+  background:repeating-linear-gradient(#e9e2cf, #e9e2cf 1px, #d8cfae 1px, #d8cfae 2px);
+  transform:translateZ(-8px) rotateY(90deg) translateX(4px);
+  box-shadow:0 0 12px rgba(0,0,0,.4);
+}
+.book-spine{
+  position:absolute; left:0; top:0; bottom:0; width:16px; transform:rotateY(90deg) translateX(-8px);
+  background:linear-gradient(#141109,#0a0906);
+  border-radius:4px 0 0 4px;
+}
+.badge-float{
+  position:absolute; background:var(--bg-card); border:1px solid var(--line); border-radius:12px;
+  padding:12px 16px; font-family:var(--ff-mono); font-size:12px; box-shadow:var(--shadow-gold);
+  animation:floaty 4s ease-in-out infinite;
+}
+.badge-float.b1{ top:8%; left:-8%; }
+.badge-float.b2{ bottom:10%; right:-6%; animation-delay:1s; }
+@keyframes floaty{ 0%,100%{transform:translateY(0);} 50%{transform:translateY(-10px);} }
+.badge-float strong{color:var(--gold); display:block; font-size:15px;}
+
+/* Contador de escassez (hero) */
+.countdown{
+  display:flex; gap:12px; margin-top:8px;
+}
+.countdown .box{
+  background:var(--bg-card); border:1px solid var(--line); border-radius:10px; padding:12px 14px;
+  text-align:center; min-width:64px;
+}
+.countdown .box .num{font-family:var(--ff-mono); font-size:24px; color:var(--gold); font-weight:700;}
+.countdown .box .lbl{font-size:10px; color:var(--muted); text-transform:uppercase; letter-spacing:.08em;}
+
+/* =========================== SCROLL REVEAL =========================== */
+.reveal{opacity:0; transform:translateY(28px); transition:opacity .7s ease, transform .7s ease;}
+.reveal.is-visible{opacity:1; transform:translateY(0);}
+
+/* =========================== BENEFÍCIOS =========================== */
+.benefits-grid{
+  display:grid; grid-template-columns:repeat(4,1fr); gap:22px;
+}
+.benefit-card{
+  background:var(--bg-card); border:1px solid var(--line); border-radius:var(--radius);
+  padding:28px 22px; transition:border-color .25s, transform .25s;
+}
+.benefit-card:hover{ border-color:var(--gold); transform:translateY(-6px); }
+.icon-circle{
+  width:48px; height:48px; border-radius:50%; background:rgba(212,175,55,0.1);
+  display:flex; align-items:center; justify-content:center; color:var(--gold); margin-bottom:16px;
+}
+.benefit-card h3{font-size:17px; font-family:var(--ff-body); font-weight:700;}
+.benefit-card p{font-size:14px; color:var(--muted); margin-top:8px;}
+
+/* =========================== O QUE VOCÊ VAI APRENDER =========================== */
+.learn-section{background:var(--bg-alt); border-top:1px solid var(--line); border-bottom:1px solid var(--line);}
+.learn-list{
+  display:grid; grid-template-columns:1fr 1fr; gap:0 40px; max-width:920px; margin:0 auto;
+}
+.learn-item{
+  display:flex; gap:16px; padding:18px 0; border-bottom:1px solid var(--line); align-items:flex-start;
+}
+.learn-item .n{
+  font-family:var(--ff-mono); color:var(--gold); font-weight:700; font-size:14px;
+  border:1px solid var(--line); border-radius:50%; width:30px; height:30px; flex-shrink:0;
+  display:flex; align-items:center; justify-content:center;
+}
+.learn-item p{font-size:15.5px;}
+
+/* =========================== PARA QUEM É =========================== */
+.for-grid{ display:grid; grid-template-columns:repeat(3,1fr); gap:22px; }
+.for-card{
+  border-radius:var(--radius); padding:30px 24px; position:relative; overflow:hidden;
+  background:rgba(255,255,255,0.03); border:1px solid var(--line);
+  backdrop-filter:blur(6px); /* glassmorphism */
+}
+.for-card svg{color:var(--gold); margin-bottom:14px;}
+.for-card h3{font-size:17px; font-family:var(--ff-body); font-weight:700; margin-bottom:8px;}
+.for-card p{font-size:14px; color:var(--muted);}
+
+/* =========================== DEPOIMENTOS =========================== */
+.testi-grid{ display:grid; grid-template-columns:repeat(3,1fr); gap:22px; }
+.testi-card{
+  background:rgba(255,255,255,0.035); border:1px solid var(--line); border-radius:var(--radius);
+  padding:26px; backdrop-filter:blur(6px);
+}
+.testi-stars{color:var(--gold); font-size:14px; letter-spacing:2px; margin-bottom:12px;}
+.testi-card p{font-size:14.5px; color:#d9d5c8; font-style:italic;}
+.testi-person{display:flex; align-items:center; gap:12px; margin-top:18px;}
+.testi-avatar{
+  width:42px; height:42px; border-radius:50%; background:linear-gradient(135deg,var(--gold),var(--gold-dim));
+  display:flex; align-items:center; justify-content:center; font-family:var(--ff-display); font-weight:800; color:#1a1508; font-size:15px;
+}
+.testi-person div strong{display:block; font-size:14px;}
+.testi-person div span{font-size:12px; color:var(--muted);}
+
+/* =========================== COMPARAÇÃO ANTES/DEPOIS =========================== */
+.compare-table{ width:100%; border-collapse:collapse; max-width:820px; margin:0 auto; overflow:hidden; border-radius:var(--radius); }
+.compare-table th{
+  font-family:var(--ff-display); font-size:19px; padding:18px 20px; text-align:left;
+}
+.compare-table th.before{ background:#1b1310; color:#c98b6b; }
+.compare-table th.after{ background:linear-gradient(135deg,var(--gold-dim),var(--gold)); color:#161104; }
+.compare-table td{ padding:15px 20px; font-size:14.5px; border-bottom:1px solid var(--line); }
+.compare-table td.before-cell{ background:rgba(201,139,107,0.06); color:#cbb; }
+.compare-table td.after-cell{ background:rgba(212,175,55,0.07); }
+.compare-table tr:last-child td{border-bottom:none;}
+
+/* =========================== GARANTIA =========================== */
+.guarantee{
+  display:flex; align-items:center; gap:40px; background:var(--bg-card);
+  border:1px solid var(--gold); border-radius:20px; padding:48px; max-width:900px; margin:0 auto;
+  box-shadow:var(--shadow-gold);
+}
+.guarantee .seal-big{
+  width:150px; height:150px; border-radius:50%; border:2px solid var(--gold); flex-shrink:0;
+  display:flex; align-items:center; justify-content:center; flex-direction:column; text-align:center;
+  font-family:var(--ff-mono); color:var(--gold); position:relative;
+}
+.guarantee .seal-big span.days{font-family:var(--ff-display); font-size:38px; font-weight:800; line-height:1;}
+.guarantee h3{font-size:24px; margin-bottom:10px;}
+.guarantee p{color:var(--muted); font-size:15px;}
+
+/* =========================== OFERTA =========================== */
+.offer-box{
+  max-width:560px; margin:0 auto; background:linear-gradient(180deg, var(--bg-card), #0d0c0a);
+  border:1px solid var(--gold); border-radius:20px; padding:44px; text-align:center;
+  box-shadow:var(--shadow-gold); position:relative;
+}
+.offer-tag{
+  position:absolute; top:-16px; left:50%; transform:translateX(-50%);
+  background:var(--gold); color:#161104; font-family:var(--ff-mono); font-size:12px; font-weight:700;
+  padding:6px 18px; border-radius:100px; letter-spacing:.05em;
+}
+.price-old{font-family:var(--ff-mono); color:var(--muted); text-decoration:line-through; font-size:20px; margin-top:18px;}
+.price-new{font-family:var(--ff-display); font-size:56px; font-weight:900; color:var(--gold); margin:6px 0;}
+.price-new sup{font-size:22px; top:-22px;}
+.price-install{color:var(--muted); font-size:14px; margin-bottom:20px;}
+.save-badge{
+  display:inline-block; background:rgba(63,143,95,0.15); color:#7fd19c; border:1px solid rgba(63,143,95,0.4);
+  padding:6px 16px; border-radius:100px; font-size:13px; font-weight:700; margin-bottom:26px;
+}
+.offer-list{ text-align:left; margin:24px 0; }
+.offer-list li{ display:flex; gap:10px; font-size:14.5px; padding:7px 0; color:#d9d5c8; }
+.offer-list li svg{ color:var(--green); flex-shrink:0; }
+
+/* =========================== FAQ (ACORDEÃO) =========================== */
+.faq-list{ max-width:760px; margin:0 auto; }
+.faq-item{ border-bottom:1px solid var(--line); }
+.faq-q{
+  width:100%; background:transparent; color:var(--paper); text-align:left; padding:22px 4px;
+  display:flex; justify-content:space-between; align-items:center; font-size:16.5px; font-weight:700;
+  font-family:var(--ff-body);
+}
+.faq-q .chev{ transition:transform .3s ease; color:var(--gold); flex-shrink:0; margin-left:16px; }
+.faq-item.open .faq-q .chev{ transform:rotate(45deg); }
+.faq-a{ max-height:0; overflow:hidden; transition:max-height .35s ease; }
+.faq-item.open .faq-a{ max-height:260px; }
+.faq-a p{ padding:0 4px 22px; color:var(--muted); font-size:14.5px; max-width:680px; }
+
+/* =========================== CTA FINAL =========================== */
+.final-cta{
+  text-align:center; background:radial-gradient(circle at 50% 0%, rgba(212,175,55,0.14), transparent 60%);
+  border-top:1px solid var(--line);
+}
+.final-cta h2{font-size:clamp(28px,4.4vw,46px); max-width:760px; margin:0 auto 18px;}
+.final-cta p{color:var(--muted); max-width:560px; margin:0 auto 34px; font-size:17px;}
+
+/* =========================== RODAPÉ =========================== */
+footer{ background:#080807; border-top:1px solid var(--line); padding:56px 0 26px; }
+.footer-grid{ display:flex; justify-content:space-between; flex-wrap:wrap; gap:32px; padding-bottom:32px; border-bottom:1px solid var(--line); }
+.footer-links{ display:flex; gap:28px; flex-wrap:wrap; font-size:14px; color:var(--muted); }
+.footer-links a:hover{ color:var(--gold); }
+.footer-bottom{ display:flex; justify-content:space-between; flex-wrap:wrap; gap:12px; padding-top:22px; font-size:12.5px; color:#5c584f; }
+
+/* =========================== FLUTUANTES =========================== */
+.floating-buy{
+  position:fixed; bottom:26px; right:26px; z-index:55; padding:15px 24px; font-size:14.5px;
+  box-shadow:0 10px 30px -6px rgba(212,175,55,0.6); opacity:0; pointer-events:none;
+  transform:translateY(20px); transition:opacity .3s ease, transform .3s ease;
+}
+.floating-buy.show{ opacity:1; pointer-events:auto; transform:translateY(0); }
+
+/* =========================== RESPONSIVO =========================== */
+@media (max-width:980px){
+  .hero-grid{ grid-template-columns:1fr; }
+  .book-wrap{ order:-1; margin-bottom:10px; }
+  .benefits-grid{ grid-template-columns:repeat(2,1fr); }
+  .for-grid, .testi-grid{ grid-template-columns:repeat(2,1fr); }
+  .learn-list{ grid-template-columns:1fr; }
+  .guarantee{ flex-direction:column; text-align:center; padding:34px; }
+}
+@media (max-width:640px){
+  .section{ padding:64px 0; }
+  .nav .btn{ display:none; }
+  .benefits-grid, .for-grid, .testi-grid{ grid-template-columns:1fr; }
+  .compare-table th, .compare-table td{ padding:12px 14px; font-size:13px; }
+  .compare-table th{ font-size:15px; }
+  .hero-cta-row .btn{ width:100%; }
+  .countdown .box{ min-width:52px; padding:10px; }
+  .offer-box{ padding:30px 22px; }
+  .price-new{ font-size:44px; }
+  .footer-grid{ flex-direction:column; }
+  .floating-buy{ left:14px; right:14px; bottom:16px; width:calc(100% - 28px); text-align:center; }
+}
+</style>
+</head>
+<body>
+
+<a href="#hero" class="skip-link">Pular para o conteúdo principal</a>
+
+<!-- ===================== BARRA FIXA SUPERIOR — Escassez ===================== -->
+<div class="topbar" role="status" aria-live="polite">
+  🔥 Oferta de lançamento por tempo limitado <span>— condição especial encerra em breve</span>
+</div>
+
+<!-- ===================== HEADER / NAVEGAÇÃO ===================== -->
+<header class="site">
+  <nav class="nav container" aria-label="Navegação principal">
+    <a href="#hero" class="logo">Código <em>Riqueza</em></a>
+    <a href="https://pay.kiwify.com.br/Xycudh2" target="_blank" rel="noopener noreferrer" class="btn btn-primary">Garantir meu exemplar</a>
+  </nav>
+</header>
+
+<main id="hero">
+
+  <!-- ===================== HERO ===================== -->
+  <section class="hero">
+    <div class="container hero-grid">
+      <div>
+        <span class="eyebrow">📘 eBook Digital · Acesso Imediato</span>
+        <h1>Pare de trabalhar a vida inteira <span class="hl">para morrer pobre.</span></h1>
+        <p class="sub">O método passo a passo que já ajudou milhares de pessoas comuns a sair das dívidas, organizar as finanças e construir um patrimônio real — mesmo ganhando pouco e sem entender nada de investimentos.</p>
+
+        <div class="hero-cta-row">
+          <a href="https://pay.kiwify.com.br/Xycudh2" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-lg">Quero mudar minha vida financeira</a>
+        </div>
+        <p class="hero-note">✔ Pagamento seguro · ✔ Acesso vitalício · ✔ Garantia incondicional de 7 dias</p>
+
+        <div class="countdown" id="countdown" aria-label="Contador regressivo da oferta">
+          <div class="box"><div class="num" id="cd-hours">00</div><div class="lbl">Horas</div></div>
+          <div class="box"><div class="num" id="cd-min">00</div><div class="lbl">Min</div></div>
+          <div class="box"><div class="num" id="cd-sec">00</div><div class="lbl">Seg</div></div>
+        </div>
+
+        <div class="trust-row">
+          <div class="trust-item">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l3 6 6 1-4.5 4.5L18 20l-6-3-6 3 1.5-6.5L3 9l6-1z"/></svg>
+            <span><strong>+15.000</strong> leitores</span>
+          </div>
+          <div class="trust-item">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            <span><strong>Compra</strong> 100% segura</span>
+          </div>
+          <div class="trust-item">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+            <span><strong>Acesso</strong> imediato</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Mockup do eBook (100% CSS) -->
+      <div class="book-wrap">
+        <div class="book">
+          <div class="book-spine"></div>
+          <div class="book-pages"></div>
+          <div class="book-cover">
+            <span class="tag">Edição Digital</span>
+            <div>
+              <h3>Código<br>Riqueza</h3>
+              <p class="sub2">O manual definitivo de finanças pessoais para sair das dívidas e construir patrimônio.</p>
+            </div>
+            <div class="seal">EDIÇÃO<br>2026</div>
+          </div>
+        </div>
+        <div class="badge-float b1"><strong>77% OFF</strong>hoje</div>
+        <div class="badge-float b2"><strong>+15k</strong>leitores</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== BENEFÍCIOS ===================== -->
+  <section class="section" id="beneficios">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="eyebrow">Por que este método funciona</span>
+        <h2>O que muda na sua vida <span class="gold-text">a partir de hoje</span></h2>
+        <p>Um sistema direto, sem enrolação, criado para pessoas reais com contas reais para pagar.</p>
+      </div>
+      <div class="benefits-grid">
+        <!-- 8 benefícios -->
+        <div class="benefit-card reveal">
+          <div class="icon-circle"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 1l4 4-4 4M3 11V9a4 4 0 014-4h14M7 23l-4-4 4-4M21 13v2a4 4 0 01-4 4H3"/></svg></div>
+          <h3>Saia das dívidas mais rápido</h3>
+          <p>Estratégia validada para renegociar e quitar dívidas em tempo recorde.</p>
+        </div>
+        <div class="benefit-card reveal">
+          <div class="icon-circle"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M8 2v4M16 2v4M3 10h18"/></svg></div>
+          <h3>Orçamento que funciona</h3>
+          <p>Um sistema simples de controlar gastos sem planilhas complicadas.</p>
+        </div>
+        <div class="benefit-card reveal">
+          <div class="icon-circle"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+          <h3>Reserva de emergência sólida</h3>
+          <p>Construa sua rede de segurança financeira em poucos meses.</p>
+        </div>
+        <div class="benefit-card reveal">
+          <div class="icon-circle"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 3v18h18M7 15l4-4 3 3 5-6"/></svg></div>
+          <h3>Comece a investir com segurança</h3>
+          <p>Do zero, mesmo sem experiência, com passos claros e sem jargões.</p>
+        </div>
+        <div class="benefit-card reveal">
+          <div class="icon-circle"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 8v4l3 3"/></svg></div>
+          <h3>Mentalidade de riqueza</h3>
+          <p>Reprograme suas crenças financeiras e tome decisões melhores.</p>
+        </div>
+        <div class="benefit-card reveal">
+          <div class="icon-circle"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12h4l3 8 4-16 3 8h4"/></svg></div>
+          <h3>Elimine gastos invisíveis</h3>
+          <p>Identifique vazamentos financeiros que sabotam seu orçamento.</p>
+        </div>
+        <div class="benefit-card reveal">
+          <div class="icon-circle"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 21V9M10 21V3M16 21v-7M22 21H2"/></svg></div>
+          <h3>Aposentadoria planejada</h3>
+          <p>Um plano realista para não depender só do INSS no futuro.</p>
+        </div>
+        <div class="benefit-card reveal">
+          <div class="icon-circle"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 13l4 4L19 7"/></svg></div>
+          <h3>Liberdade financeira real</h3>
+          <p>Chegue mais rápido ao dia em que trabalhar vira escolha, não obrigação.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== O QUE VOCÊ VAI APRENDER ===================== -->
+  <section class="section learn-section" id="conteudo">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="eyebrow">Conteúdo do eBook</span>
+        <h2>O que você vai <span class="gold-text">aprender lá dentro</span></h2>
+        <p>10 módulos práticos, sem teoria de sobra — só o que realmente muda sua situação financeira.</p>
+      </div>
+      <div class="learn-list">
+        <div class="learn-item reveal"><span class="n">01</span><p>Como sair das dívidas usando o Método Bola de Neve Turbinado</p></div>
+        <div class="learn-item reveal"><span class="n">02</span><p>O sistema de orçamento 50/30/20 adaptado à realidade brasileira</p></div>
+        <div class="learn-item reveal"><span class="n">03</span><p>Como montar sua reserva de emergência em 90 dias</p></div>
+        <div class="learn-item reveal"><span class="n">04</span><p>Os 5 erros que impedem 90% das pessoas de enriquecer</p></div>
+        <div class="learn-item reveal"><span class="n">05</span><p>Como investir com menos de R$100 por mês</p></div>
+        <div class="learn-item reveal"><span class="n">06</span><p>Renda extra: 7 formas comprovadas de aumentar seus ganhos</p></div>
+        <div class="learn-item reveal"><span class="n">07</span><p>Psicologia financeira: reprogramando sua mente para a riqueza</p></div>
+        <div class="learn-item reveal"><span class="n">08</span><p>Planejamento de aposentadoria sem depender só do INSS</p></div>
+        <div class="learn-item reveal"><span class="n">09</span><p>Como proteger seu patrimônio da inflação</p></div>
+        <div class="learn-item reveal"><span class="n">10</span><p>O plano de 12 meses para transformar sua vida financeira</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== PARA QUEM É ===================== -->
+  <section class="section" id="para-quem">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="eyebrow">Este eBook é para você se...</span>
+        <h2>Feito para <span class="gold-text">pessoas reais</span></h2>
+      </div>
+      <div class="for-grid">
+        <div class="for-card reveal">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 9v4M12 17h.01M10.3 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.7 3.86a2 2 0 00-3.4 0z"/></svg>
+          <h3>Você está endividado e não vê saída</h3>
+          <p>Um plano prático para renegociar, reorganizar e voltar a dormir tranquilo.</p>
+        </div>
+        <div class="for-card reveal">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v16"/></svg>
+          <h3>Você ganha bem, mas o dinheiro some</h3>
+          <p>Descubra para onde seu salário está indo e retome o controle.</p>
+        </div>
+        <div class="for-card reveal">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 3v18h18M7 15l4-4 3 3 5-6"/></svg>
+          <h3>Você quer investir, mas tem medo</h3>
+          <p>Aprenda com segurança, sem termos técnicos e sem arriscar no escuro.</p>
+        </div>
+        <div class="for-card reveal">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l3 6 6 1-4.5 4.5L18 20l-6-3-6 3 1.5-6.5L3 9l6-1z"/></svg>
+          <h3>Você sonha com liberdade financeira</h3>
+          <p>Um caminho claro para trocar a correria por escolhas.</p>
+        </div>
+        <div class="for-card reveal">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2M12 11a4 4 0 100-8 4 4 0 000 8z"/></svg>
+          <h3>Você é autônomo ou empreendedor</h3>
+          <p>Organize a renda variável e pare de viver no improviso financeiro.</p>
+        </div>
+        <div class="for-card reveal">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.8 4.6a5.5 5.5 0 00-7.8 0L12 5.6l-1-1a5.5 5.5 0 10-7.8 7.8l1 1L12 21l7.8-7.6 1-1a5.5 5.5 0 000-7.8z"/></svg>
+          <h3>Vocês brigam por causa de dinheiro</h3>
+          <p>Um método para colocar as finanças do casal na mesma página.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== DEPOIMENTOS ===================== -->
+  <section class="section" id="depoimentos" style="background:var(--bg-alt); border-top:1px solid var(--line); border-bottom:1px solid var(--line);">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="eyebrow">Prova social</span>
+        <h2>Quem aplicou, <span class="gold-text">transformou a realidade</span></h2>
+      </div>
+      <div class="testi-grid">
+        <div class="testi-card reveal">
+          <div class="testi-stars">★★★★★</div>
+          <p>"Em 4 meses quitei três cartões que estavam me sufocando. O método da bola de neve turbinado mudou minha relação com dinheiro."</p>
+          <div class="testi-person"><div class="testi-avatar">MF</div><div><strong>Mariana Ferreira</strong><span>Analista Administrativa, SP</span></div></div>
+        </div>
+        <div class="testi-card reveal">
+          <div class="testi-stars">★★★★★</div>
+          <p>"Sempre achei investimento coisa pra rico. Comecei com R$80 por mês seguindo o passo a passo e hoje já tenho minha reserva."</p>
+          <div class="testi-person"><div class="testi-avatar">RC</div><div><strong>Rafael Costa</strong><span>Motorista de aplicativo, MG</span></div></div>
+        </div>
+        <div class="testi-card reveal">
+          <div class="testi-stars">★★★★★</div>
+          <p>"Eu e meu marido brigávamos toda semana por dinheiro. O capítulo sobre finanças em casal resolveu isso em uma conversa."</p>
+          <div class="testi-person"><div class="testi-avatar">JP</div><div><strong>Juliana Prado</strong><span>Professora, RJ</span></div></div>
+        </div>
+        <div class="testi-card reveal">
+          <div class="testi-stars">★★★★★</div>
+          <p>"Achei que era mais um ebook genérico. Muito prático, direto ao ponto, sem enrolação. Recomendo de olhos fechados."</p>
+          <div class="testi-person"><div class="testi-avatar">TA</div><div><strong>Thiago Almeida</strong><span>Autônomo, PR</span></div></div>
+        </div>
+        <div class="testi-card reveal">
+          <div class="testi-stars">★★★★★</div>
+          <p>"Montei minha reserva de emergência em 3 meses seguindo o plano de 90 dias. Nunca imaginei que fosse tão simples."</p>
+          <div class="testi-person"><div class="testi-avatar">CL</div><div><strong>Camila Lopes</strong><span>Enfermeira, BA</span></div></div>
+        </div>
+        <div class="testi-card reveal">
+          <div class="testi-stars">★★★★★</div>
+          <p>"Sempre ganhei bem mas chegava no fim do mês no zero. Descobri meus gastos invisíveis e sobra dinheiro todo mês agora."</p>
+          <div class="testi-person"><div class="testi-avatar">DS</div><div><strong>Diego Santos</strong><span>Engenheiro, SC</span></div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== COMPARAÇÃO ANTES x DEPOIS ===================== -->
+  <section class="section" id="comparacao">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="eyebrow">A transformação</span>
+        <h2>Da bagunça financeira <span class="gold-text">ao controle total</span></h2>
+      </div>
+      <div class="reveal" style="overflow-x:auto;">
+        <table class="compare-table">
+          <thead>
+            <tr><th class="before">😰 Antes</th><th class="after">✨ Depois</th></tr>
+          </thead>
+          <tbody>
+            <tr><td class="before-cell">Não sabe para onde o dinheiro vai</td><td class="after-cell">Controle total do orçamento mensal</td></tr>
+            <tr><td class="before-cell">Vive no vermelho e no limite do cartão</td><td class="after-cell">Contas em dia e cartão sob controle</td></tr>
+            <tr><td class="before-cell">Nenhuma reserva para emergências</td><td class="after-cell">Reserva de emergência sólida</td></tr>
+            <tr><td class="before-cell">Medo de investir e perder dinheiro</td><td class="after-cell">Investe com segurança e clareza</td></tr>
+            <tr><td class="before-cell">Ansiedade toda vez que vê o extrato</td><td class="after-cell">Tranquilidade e paz financeira</td></tr>
+            <tr><td class="before-cell">Aposentadoria é uma incógnita</td><td class="after-cell">Plano claro para o futuro</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== GARANTIA ===================== -->
+  <section class="section" id="garantia">
+    <div class="container">
+      <div class="guarantee reveal">
+        <div class="seal-big"><span class="days">7</span>DIAS DE<br>GARANTIA</div>
+        <div>
+          <h3>Risco zero. A decisão é toda sua.</h3>
+          <p>Se em até 7 dias você sentir que o Código Riqueza não é para você, basta enviar um e-mail e devolvemos 100% do seu dinheiro, sem perguntas e sem burocracia. Você só tem a ganhar.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== OFERTA ===================== -->
+  <section class="section" id="oferta">
+    <div class="container" style="text-align:center;">
+      <div class="section-head reveal" style="margin-bottom:36px;">
+        <span class="eyebrow">Oferta de lançamento</span>
+        <h2>Comece a mudar de vida <span class="gold-text">hoje mesmo</span></h2>
+        <p>Menos que o valor de um delivery — para transformar sua relação com o dinheiro para sempre.</p>
+      </div>
+
+      <div class="offer-box reveal">
+        <span class="offer-tag">77% de desconto</span>
+        <div class="price-old">De R$ 197,00</div>
+        <div class="price-new"><sup>R$</sup>47<sup>,00</sup></div>
+        <div class="price-install">ou 12x de R$ 4,70 no cartão</div>
+        <div class="save-badge">Você economiza R$ 150,00</div>
+
+        <ul class="offer-list">
+          <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 13l4 4L19 7"/></svg> eBook completo em PDF (218 páginas)</li>
+          <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 13l4 4L19 7"/></svg> Planilha de orçamento pronta para usar</li>
+          <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 13l4 4L19 7"/></svg> Checklist do plano de 12 meses</li>
+          <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 13l4 4L19 7"/></svg> Acesso imediato e vitalício</li>
+          <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 13l4 4L19 7"/></svg> Garantia incondicional de 7 dias</li>
+        </ul>
+
+        <a href="https://pay.kiwify.com.br/Xycudh2" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-block btn-lg">Quero garantir meu exemplar agora</a>
+        <p class="hero-note" style="margin-top:14px;">🔒 Ambiente seguro · Pagamento processado com criptografia</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== FAQ ===================== -->
+  <section class="section" id="faq" style="background:var(--bg-alt); border-top:1px solid var(--line); border-bottom:1px solid var(--line);">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="eyebrow">Dúvidas frequentes</span>
+        <h2>Perguntas <span class="gold-text">frequentes</span></h2>
+      </div>
+
+      <div class="faq-list reveal" id="faq-list">
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false">O eBook é enviado em papel? <span class="chev">+</span></button>
+          <div class="faq-a"><p>Não, é um produto 100% digital em PDF. Você recebe o acesso por e-mail imediatamente após a compra e pode ler no celular, tablet ou computador.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false">Funciona mesmo se eu ganho pouco? <span class="chev">+</span></button>
+          <div class="faq-a"><p>Sim. O método foi criado justamente para quem tem orçamento apertado — os exemplos práticos usam valores acessíveis, a partir de R$100 por mês.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false">Preciso entender de investimentos? <span class="chev">+</span></button>
+          <div class="faq-a"><p>Não. A linguagem é simples e direta, sem jargões técnicos. Tudo é explicado passo a passo, do zero absoluto.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false">Em quanto tempo vejo resultado? <span class="chev">+</span></button>
+          <div class="faq-a"><p>Muitos leitores relatam mudanças já nas primeiras semanas ao aplicar o sistema de orçamento. Resultados mais estruturais, como reserva de emergência, costumam aparecer entre 60 e 90 dias.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false">Como recebo o acesso após a compra? <span class="chev">+</span></button>
+          <div class="faq-a"><p>Imediatamente após a confirmação do pagamento, você recebe um e-mail com o link de download do material.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false">O pagamento é seguro? <span class="chev">+</span></button>
+          <div class="faq-a"><p>Sim, todo o processamento é feito em ambiente criptografado por plataformas de pagamento certificadas.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false">Posso parcelar a compra? <span class="chev">+</span></button>
+          <div class="faq-a"><p>Sim, o pagamento pode ser parcelado em até 12x no cartão de crédito.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false">E se eu não gostar do conteúdo? <span class="chev">+</span></button>
+          <div class="faq-a"><p>Você tem 7 dias de garantia incondicional. Se não gostar, é só solicitar o reembolso e devolvemos 100% do valor pago.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false">O acesso tem validade? <span class="chev">+</span></button>
+          <div class="faq-a"><p>Não. O acesso é vitalício — você pode ler e reler quando quiser, sem prazo de expiração.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false">Serve para quem já tem dívidas grandes? <span class="chev">+</span></button>
+          <div class="faq-a"><p>Sim, inclusive é um dos focos centrais do método: o módulo de quitação de dívidas foi criado especialmente para essas situações.</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== CTA FINAL ===================== -->
+  <section class="section final-cta">
+    <div class="container reveal">
+      <h2>Sua vida financeira pode ser diferente <span class="gold-text">a partir de agora.</span></h2>
+      <p>Milhares de pessoas já deram o primeiro passo. Chegou a sua vez de assumir o controle do seu dinheiro.</p>
+      <a href="https://pay.kiwify.com.br/Xycudh2" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-lg">Quero começar minha transformação</a>
+    </div>
+  </section>
+
+</main>
+
+<!-- ===================== RODAPÉ ===================== -->
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <a href="#hero" class="logo">Código <em>Riqueza</em></a>
+        <p style="color:var(--muted); font-size:13.5px; margin-top:10px; max-width:280px;">Educação financeira prática para pessoas reais.</p>
+      </div>
+      <nav class="footer-links" aria-label="Links institucionais">
+        <a href="#politica-privacidade">Política de Privacidade</a>
+        <a href="#termos-de-uso">Termos de Uso</a>
+        <a href="#contato">Contato</a>
+      </nav>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Código Riqueza. Todos os direitos reservados.</span>
+      <span>Este produto não garante resultados financeiros específicos. Resultados variam conforme aplicação individual.</span>
+    </div>
+  </div>
+</footer>
+
+<!-- ===================== BOTÕES FLUTUANTES ===================== -->
+<a href="https://pay.kiwify.com.br/Xycudh2" target="_blank" rel="noopener noreferrer" class="btn btn-primary floating-buy" id="floatingBuy">Garantir por R$47</a>
+
+<script>
+/* =========================================================================
+   JAVASCRIPT — Interações da página
+   1) Contador regressivo (escassez)
+   2) Reveal on scroll (Intersection Observer)
+   3) Acordeão do FAQ
+   4) Botão flutuante de compra (aparece após rolar)
+   5) Parallax leve no glow do hero
+   ========================================================================= */
+(function(){
+  "use strict";
+
+  /* ---------- 1) CONTADOR REGRESSIVO ---------- */
+  // Reinicia a cada 12h a partir do primeiro acesso, simulando urgência contínua.
+  function startCountdown(){
+    var STORAGE_KEY = 'cr_offer_deadline';
+    var TWELVE_HOURS = 12 * 60 * 60 * 1000;
+    var deadline = parseInt(localStorage.getItem(STORAGE_KEY), 10);
+    var now = Date.now();
+
+    if (!deadline || deadline < now) {
+      deadline = now + TWELVE_HOURS;
+      localStorage.setItem(STORAGE_KEY, deadline);
+    }
+
+    var hEl = document.getElementById('cd-hours');
+    var mEl = document.getElementById('cd-min');
+    var sEl = document.getElementById('cd-sec');
+    if(!hEl) return;
+
+    function pad(n){ return String(n).padStart(2,'0'); }
+
+    function tick(){
+      var diff = deadline - Date.now();
+      if (diff <= 0) {
+        deadline = Date.now() + TWELVE_HOURS;
+        localStorage.setItem(STORAGE_KEY, deadline);
+        diff = TWELVE_HOURS;
+      }
+      var hours = Math.floor(diff / 3600000);
+      var mins = Math.floor((diff % 3600000) / 60000);
+      var secs = Math.floor((diff % 60000) / 1000);
+      hEl.textContent = pad(hours);
+      mEl.textContent = pad(mins);
+      sEl.textContent = pad(secs);
+    }
+    tick();
+    setInterval(tick, 1000);
+  }
+  startCountdown();
+
+  /* ---------- 2) REVEAL ON SCROLL ---------- */
+  var revealEls = document.querySelectorAll('.reveal');
+  if ('IntersectionObserver' in window) {
+    var observer = new IntersectionObserver(function(entries){
+      entries.forEach(function(entry){
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+    revealEls.forEach(function(el){ observer.observe(el); });
+  } else {
+    // Fallback: sem IntersectionObserver, apenas exibe tudo
+    revealEls.forEach(function(el){ el.classList.add('is-visible'); });
+  }
+
+  /* ---------- 3) ACORDEÃO DO FAQ ---------- */
+  var faqItems = document.querySelectorAll('.faq-item');
+  faqItems.forEach(function(item){
+    var btn = item.querySelector('.faq-q');
+    btn.addEventListener('click', function(){
+      var isOpen = item.classList.contains('open');
+      // Fecha os outros itens abertos (acordeão exclusivo)
+      faqItems.forEach(function(other){
+        other.classList.remove('open');
+        other.querySelector('.faq-q').setAttribute('aria-expanded', 'false');
+      });
+      if (!isOpen) {
+        item.classList.add('open');
+        btn.setAttribute('aria-expanded', 'true');
+      }
+    });
+  });
+
+  /* ---------- 4) BOTÃO FLUTUANTE DE COMPRA ---------- */
+  var floatingBuy = document.getElementById('floatingBuy');
+  var offerSection = document.getElementById('oferta');
+  window.addEventListener('scroll', function(){
+    var scrollY = window.scrollY || window.pageYOffset;
+    var showAfter = window.innerHeight * 0.9;
+    var offerTop = offerSection ? offerSection.offsetTop : Infinity;
+    var offerBottom = offerTop + (offerSection ? offerSection.offsetHeight : 0);
+    var nearOffer = scrollY + window.innerHeight > offerTop && scrollY < offerBottom;
+
+    if (scrollY > showAfter && !nearOffer) {
+      floatingBuy.classList.add('show');
+    } else {
+      floatingBuy.classList.remove('show');
+    }
+  }, { passive: true });
+
+  /* ---------- 5) PARALLAX LEVE NO GLOW DO HERO ---------- */
+  var heroGlowTarget = document.querySelector('.hero');
+  window.addEventListener('scroll', function(){
+    if (!heroGlowTarget) return;
+    var offset = window.scrollY * 0.15;
+    heroGlowTarget.style.setProperty('--parallax', offset + 'px');
+    heroGlowTarget.style.backgroundPosition = '0 ' + offset + 'px';
+  }, { passive: true });
+
+})();
+</script>
+</body>
+</html>
